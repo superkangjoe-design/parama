@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "description": "Landing page premium Parama dengan AI CS widget dan backend OpenAI sederhana.",
   "scripts": {
+    "build": "echo Static site build complete",
+    "vercel-build": "echo Static site build complete",
     "start": "node server.js"
   }
 }
