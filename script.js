@@ -1,8 +1,7 @@
 const whatsappNumber = "628112424010";
-const orderMessage =
+const defaultOrderMessage =
   "Halo admin Parama, saya tertarik dengan Parama Special Cream For Man. Mohon info paket terbaik, stok terbaru, dan cara pemesanannya.";
-
-const orderLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(orderMessage)}`;
+const pageOrderMessage = document.body.dataset.orderMessage?.trim() || defaultOrderMessage;
 const trackingConfig = window.trackingConfig || {};
 
 if (
@@ -24,6 +23,8 @@ if (
 }
 
 document.querySelectorAll("[data-order-link]").forEach((link) => {
+  const orderMessage = link.dataset.orderMessage?.trim() || pageOrderMessage;
+  const orderLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(orderMessage)}`;
   link.setAttribute("href", orderLink);
   link.setAttribute("target", "_blank");
   link.setAttribute("rel", "noreferrer");
@@ -49,7 +50,7 @@ document.querySelectorAll("[data-order-link]").forEach((link) => {
 
 document.getElementById("copy-order")?.addEventListener("click", async () => {
   try {
-    await navigator.clipboard.writeText(orderMessage);
+    await navigator.clipboard.writeText(pageOrderMessage);
     const note = document.getElementById("order-note");
     if (note) {
       note.textContent = "Template order berhasil disalin. Tinggal kirim ke calon pembeli atau admin.";
@@ -69,7 +70,7 @@ document.getElementById("copy-order")?.addEventListener("click", async () => {
     const note = document.getElementById("order-note");
     if (note) {
       note.textContent =
-        "Clipboard tidak tersedia di browser ini. Template order: " + orderMessage;
+        "Clipboard tidak tersedia di browser ini. Template order: " + pageOrderMessage;
     }
   }
 });
