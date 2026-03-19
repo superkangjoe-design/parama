@@ -229,7 +229,8 @@ h2 {
 .audience-grid,
 .link-card-grid,
 .city-grid,
-.city-faq-list {
+.city-faq-list,
+.sibling-city-links {
   display: flex;
   flex-wrap: wrap;
 }
@@ -667,7 +668,8 @@ h2 {
 .breadcrumbs span,
 .city-panel p,
 .city-panel li,
-.city-faq-item p {
+.city-faq-item p,
+.sibling-city-links a {
   color: var(--muted);
   line-height: 1.7;
 }
@@ -738,6 +740,25 @@ h2 {
   flex: 1 1 320px;
   border-radius: 22px;
   padding: 22px;
+}
+
+.sibling-city-links {
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.sibling-city-links a {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.05);
+  transition: transform 250ms ease, border-color 250ms ease, color 250ms ease;
+}
+
+.sibling-city-links a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(244, 212, 161, 0.45);
+  color: var(--text);
 }
 
 .micro-copy {
