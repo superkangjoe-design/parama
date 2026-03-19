@@ -1,0 +1,24 @@
+{
+  "incoming": {
+    "wa_number": "entry[0].changes[0].value.messages[0].from",
+    "message_text": "entry[0].changes[0].value.messages[0].text.body",
+    "customer_name": "entry[0].changes[0].value.contacts[0].profile.name",
+    "message_id": "entry[0].changes[0].value.messages[0].id"
+  },
+  "lead_sheet": {
+    "timestamp": "timestamp",
+    "wa_number": "wa_number",
+    "customer_name": "customer_name",
+    "city": "city",
+    "selected_package": "selected_package",
+    "last_intent": "last_intent",
+    "lead_score": "lead_score",
+    "handoff_status": "handoff_status",
+    "last_message": "message_text",
+    "ai_reply": "ai_reply",
+    "notes": "notes",
+    "source": "source",
+    "created_at": "created_at",
+    "updated_at": "updated_at"
+  }
+}

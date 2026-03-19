@@ -1,0 +1,9 @@
+{
+  "name": "parama-landingpage",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Landing page premium Parama dengan AI CS widget dan backend OpenAI sederhana.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

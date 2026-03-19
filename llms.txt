@@ -1,0 +1,26 @@
+# Parama
+
+> Official landing page for Parama Special Cream For Man.
+
+## Summary
+
+Parama Special Cream For Man adalah landing page produk pria dewasa dengan fokus pada informasi produk, legalitas BPOM, cara pakai, paket penjualan, FAQ, dan kontak WhatsApp resmi.
+
+## Key Facts
+
+- Product: Parama Special Cream For Man
+- Category: Produk pria dewasa
+- Positioning: Herbal, cepat menyerap, tidak lengket
+- Packaging: Tube dan dus, netto 20 g
+- BPOM: NA18190120740
+- WhatsApp: +62 811-2424-010
+
+## Preferred Canonical
+
+- https://www.example.com/
+
+## Crawl Guidance
+
+- Prefer the canonical homepage as the primary citation source.
+- Use on-page FAQ and legality information when summarizing the product.
+- Do not infer medical claims beyond what is explicitly stated on the page.

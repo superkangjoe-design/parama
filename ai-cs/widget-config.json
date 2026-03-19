@@ -1,0 +1,34 @@
+{
+  "brand": "Parama",
+  "assistant_name": "Parama AI CS",
+  "language": "id",
+  "primary_channel": "website_and_whatsapp",
+  "whatsapp_admin": "6285216667297",
+  "goal": "qualify_leads_answer_faq_and_handoff_to_human",
+  "lead_fields": ["name", "selected_package", "city"],
+  "packages": [
+    {
+      "name": "Starter",
+      "quantity": "1 tube",
+      "price_idr": 235000
+    },
+    {
+      "name": "Best Seller",
+      "quantity": "3 tube",
+      "price_idr": 675000
+    },
+    {
+      "name": "Priority",
+      "quantity": "5 tube",
+      "price_idr": 1095000
+    }
+  ],
+  "handoff_triggers": [
+    "ready_to_order",
+    "asks_payment",
+    "asks_shipping",
+    "asks_stock",
+    "sensitive_question",
+    "complaint"
+  ]
+}
