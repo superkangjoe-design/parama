@@ -180,7 +180,7 @@ h2 {
 
 h1 {
   font-size: clamp(3.3rem, 7vw, 6.4rem);
-  max-width: 12ch;
+  max-width: 15ch;
 }
 
 h1 span {
@@ -326,31 +326,23 @@ h2 {
 
 .hero-visual {
   position: relative;
+  display: flex;
+  align-items: stretch;
   min-height: 640px;
 }
 
 .visual-card {
-  position: absolute;
   overflow: hidden;
   border-radius: var(--radius-xl);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: var(--shadow);
 }
 
-.visual-packshot {
-  top: 36px;
-  right: 10px;
-  width: min(92%, 500px);
-  padding: 24px;
-  background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.12), transparent 40%),
-    linear-gradient(180deg, rgba(215, 185, 139, 0.16), rgba(255, 255, 255, 0.02));
-}
-
 .visual-model {
-  left: 0;
-  bottom: 0;
-  width: min(52%, 260px);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
   background: #090b0f;
 }
 
@@ -358,13 +350,15 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 
 .price-float {
   position: absolute;
-  left: 42px;
-  top: 22px;
-  padding: 16px 20px;
+  right: 24px;
+  bottom: 24px;
+  width: min(100%, 320px);
+  padding: 18px 22px;
   border-radius: 18px;
   background: rgba(5, 7, 10, 0.86);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -386,7 +380,9 @@ h2 {
 .problem,
 .benefit,
 .story,
+.testimonial,
 .superiority,
+.shop,
 .packages,
 .routine,
 .legality,
@@ -473,6 +469,49 @@ h2 {
   padding: 36px;
 }
 
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.testimonial-card {
+  padding: 28px;
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(20px);
+}
+
+.testimonial-quote {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 1.02rem;
+}
+
+.testimonial-meta {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.testimonial-meta strong,
+.testimonial-meta span {
+  display: block;
+}
+
+.testimonial-meta strong {
+  margin-bottom: 6px;
+}
+
+.testimonial-meta span {
+  color: var(--muted);
+}
+
 .check-list,
 .package-list {
   margin: 26px 0 0;
@@ -509,6 +548,7 @@ h2 {
 .benefit-card h3,
 .routine-step h3,
 .package-card h3,
+.shop-card h3,
 .audience-card h3 {
   margin: 0 0 12px;
 }
@@ -532,6 +572,156 @@ h2 {
   letter-spacing: 0.18rem;
   text-transform: uppercase;
   font-size: 0.8rem;
+}
+
+.shop-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.95fr);
+  gap: 20px;
+  align-items: start;
+  margin-top: 24px;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.shop-card,
+.checkout-card,
+.payment-option {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(20px);
+}
+
+.shop-card,
+.checkout-card {
+  border-radius: var(--radius-xl);
+}
+
+.shop-card {
+  padding: 24px;
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+}
+
+.shop-card.is-selected {
+  border-color: rgba(244, 212, 161, 0.58);
+  background: linear-gradient(180deg, rgba(244, 212, 161, 0.14), rgba(255, 255, 255, 0.05));
+  transform: translateY(-4px);
+}
+
+.shop-badge,
+.payment-label {
+  margin: 0 0 12px;
+  color: var(--gold);
+  letter-spacing: 0.18rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.shop-copy,
+.payment-note,
+.checkout-summary span {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.shop-card strong,
+.checkout-summary strong {
+  display: block;
+  font-family: "Bodoni MT", "Times New Roman", serif;
+  color: var(--gold-strong);
+}
+
+.shop-card strong {
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+
+.shop-list {
+  margin: 0 0 24px;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.checkout-card {
+  position: sticky;
+  top: 24px;
+  padding: 26px;
+}
+
+.checkout-heading h3 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.05;
+  font-family: "Bodoni MT", "Times New Roman", serif;
+}
+
+.checkout-summary {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.checkout-summary div {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.checkout-summary span {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.checkout-summary strong {
+  font-size: 1.5rem;
+}
+
+.payment-methods {
+  margin-top: 24px;
+}
+
+.payment-grid,
+.checkout-actions {
+  display: grid;
+  gap: 12px;
+}
+
+.payment-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.payment-option {
+  min-height: 54px;
+  padding: 0 16px;
+  border-radius: 18px;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.payment-option:hover,
+.payment-option.is-active {
+  transform: translateY(-2px);
+  border-color: rgba(244, 212, 161, 0.5);
+}
+
+.payment-option.is-active {
+  background: linear-gradient(135deg, rgba(244, 212, 161, 0.18), rgba(255, 255, 255, 0.06));
+}
+
+.payment-note {
+  margin: 14px 0 0;
+}
+
+.checkout-actions {
+  margin-top: 24px;
 }
 
 .routine-grid {
@@ -814,7 +1004,8 @@ h2 {
   .site-header,
   .hero,
   .story,
-  .legality {
+  .legality,
+  .shop-layout {
     grid-template-columns: 1fr;
   }
 
@@ -837,36 +1028,51 @@ h2 {
     min-height: 560px;
   }
 
-  .visual-packshot {
-    position: relative;
-    width: 100%;
-    top: 0;
-    right: 0;
-  }
-
   .visual-model {
-    width: 42%;
+    min-height: 500px;
   }
 
   .price-float {
-    top: auto;
-    bottom: 24px;
-    left: auto;
     right: 18px;
+    bottom: 18px;
+    max-width: 280px;
   }
 
   .package-featured {
     transform: none;
   }
+
+  .checkout-card {
+    position: static;
+  }
+
+  .shop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 720px) {
   .hero-visual {
-    min-height: 440px;
+    min-height: auto;
+  }
+
+  .shop-grid,
+  .payment-grid {
+    grid-template-columns: 1fr;
   }
 
   .visual-model {
-    width: 46%;
+    min-height: 420px;
+  }
+
+  .price-float {
+    right: 14px;
+    bottom: 14px;
+    max-width: calc(100% - 28px);
   }
 
   .sticky-cta {
@@ -886,7 +1092,6 @@ h2 {
   .sticky-cta .button {
     width: 100%;
   }
-
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,0 +1,41 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="28" fill="#F4F6FB"/>
+  <rect x="38" y="14" width="1124" height="714" fill="white" stroke="#DCE1EE" stroke-width="2"/>
+
+  <rect x="56" y="32" width="1088" height="158" fill="white"/>
+  <rect x="56" y="32" width="1088" height="158" stroke="#DCE1EE" stroke-width="2"/>
+
+  <rect x="74" y="50" width="108" height="28" rx="6" fill="#14992D"/>
+  <text x="128" y="70" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Kosmetika</text>
+
+  <text x="74" y="104" fill="#111111" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">PARAMA BODY CREAM FOR MAN</text>
+  <text x="74" y="139" fill="#111111" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">ARBA'IN</text>
+  <text x="74" y="174" fill="#111111" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">NA18250105512</text>
+
+  <rect x="56" y="190" width="350" height="182" fill="white" stroke="#DCE1EE" stroke-width="2"/>
+  <rect x="406" y="190" width="308" height="182" fill="white" stroke="#DCE1EE" stroke-width="2"/>
+  <rect x="714" y="190" width="430" height="182" fill="white" stroke="#DCE1EE" stroke-width="2"/>
+
+  <text x="74" y="229" fill="#151515" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Tanggal Terbit</text>
+  <text x="74" y="268" fill="#222222" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="500">2025-04-15</text>
+
+  <text x="424" y="229" fill="#151515" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Komposisi</text>
+  <text x="424" y="268" fill="#222222" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="500">-</text>
+
+  <text x="732" y="229" fill="#151515" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Pendaftar</text>
+  <text x="732" y="261" fill="#3C42FF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="500">INVESTAMA JAYA PERKASA, CV</text>
+  <text x="732" y="300" fill="#222222" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="500">-</text>
+
+  <rect x="56" y="372" width="1088" height="112" fill="white" stroke="#DCE1EE" stroke-width="2"/>
+  <text x="74" y="426" fill="#151515" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Kemasan</text>
+  <text x="74" y="462" fill="#222222" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="500">Tube, Dus 20 g</text>
+
+  <rect x="56" y="484" width="1088" height="110" fill="white" stroke="#DCE1EE" stroke-width="2"/>
+  <text x="74" y="538" fill="#151515" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Kits</text>
+  <text x="74" y="574" fill="#222222" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="500">-</text>
+
+  <rect x="56" y="594" width="1088" height="134" fill="white" stroke="#DCE1EE" stroke-width="2"/>
+  <text x="74" y="646" fill="#151515" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Diterbitkan Oleh</text>
+  <text x="74" y="703" fill="#222222" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="500">Notifikasi Kosmetika</text>
+  <text x="74" y="736" fill="#111111" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Direktorat Registrasi Obat Tradisional, Suplemen Kesehatan, dan Kosmetik</text>
+</svg>

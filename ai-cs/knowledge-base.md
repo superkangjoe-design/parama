@@ -27,18 +27,18 @@
 
 ## Legalitas
 
-- BPOM: NA18190120740
+- BPOM: NA18250105512
 - Merk: ARBAIN
 - Kemasan: Tube, dus, 20 g
 
 ## Cara Pakai
 
 1. Gunakan minimal 1 jam sebelum berhubungan.
-2. Oles tipis pada bagian atas dan bawah.
-3. Hindari area lubang.
+2. Oleskan tipis pada bagian batang.
+3. Jangan terkena area lubang.
 4. Tunggu hingga bereaksi dan terasa hangat.
 5. Bersihkan dengan air hingga bersih.
-6. Untuk pemakaian rutin, materi produk menyarankan digunakan sambil diurut.
+6. Untuk pemakaian rutin, materi produk terbaru menyarankan digunakan setiap malam sambil diurut untuk hasil yang maksimal.
 
 ## Paket Penjualan Saat Ini
 
@@ -49,13 +49,13 @@
 ## FAQ Inti
 
 ### Apakah legal?
-Ya, berdasarkan materi yang dilampirkan produk ditampilkan telah terdaftar di BPOM dengan nomor NA18190120740.
+Ya, berdasarkan materi yang dilampirkan produk ditampilkan telah terdaftar di BPOM dengan nomor NA18250105512.
 
 ### Apakah lengket?
 Materi produk menyebut cepat menyerap dan tidak lengket.
 
 ### Apakah bisa dipakai rutin?
-Materi produk menekankan penggunaan jangka panjang dan pemakaian rutin.
+Materi produk terbaru menekankan pemakaian rutin setiap malam sambil diurut untuk hasil yang maksimal.
 
 ### Apakah hasilnya instan?
 Jangan menjanjikan hasil pasti atau instan. Jawab bahwa hasil penggunaan dapat berbeda pada tiap orang dan penggunaan harus sesuai arahan produk.

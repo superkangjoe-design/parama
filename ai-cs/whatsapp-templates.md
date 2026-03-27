@@ -10,7 +10,7 @@ Parama adalah krim khusus pria dewasa dengan pendekatan herbal, cepat menyerap, 
 
 ## 3. Jawaban Legalitas
 
-Berdasarkan materi resmi, Parama ditampilkan sudah terdaftar di BPOM dengan nomor NA18190120740. Jadi poin legalitasnya jelas. Mau saya lanjutkan ke info harga dan paket?
+Berdasarkan materi resmi, Parama ditampilkan sudah terdaftar di BPOM dengan nomor NA18250105512. Jadi poin legalitasnya jelas. Mau saya lanjutkan ke info harga dan paket?
 
 ## 4. Jawaban Paket
 
@@ -25,10 +25,12 @@ Kalau mau lebih hemat biasanya banyak yang ambil paket 3 tube. Kakak tertarik pa
 
 Cara pakainya:
 1. Gunakan minimal 1 jam sebelum berhubungan
-2. Oles tipis pada bagian atas dan bawah
-3. Hindari area lubang
+2. Oleskan tipis pada bagian batang
+3. Jangan terkena area lubang
 4. Tunggu sampai bereaksi dan terasa hangat
 5. Bersihkan hingga bersih
+
+Untuk pemakaian rutin, materi terbaru menyarankan digunakan setiap malam sambil diurut untuk hasil yang maksimal.
 
 Kalau kakak mau, saya bantu arahkan ke paket yang cocok juga.
 

@@ -22,7 +22,7 @@ Fakta penting:
 - cepat menyerap
 - tidak lengket
 - netto 20 g
-- BPOM: NA18190120740
+- BPOM: NA18250105512
 - paket:
   - 1 tube Rp235.000
   - 3 tube Rp675.000
