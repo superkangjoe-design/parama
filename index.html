@@ -494,6 +494,7 @@
               class="shop-card reveal is-selected"
               data-product-card
               data-product-id="starter"
+              data-package-label="Paket Satuan"
               data-product-name="Parama 1 Pieces"
               data-product-price="235000"
               data-product-type="Pembelian satuan"
@@ -516,6 +517,7 @@
               class="shop-card reveal"
               data-product-card
               data-product-id="best-seller"
+              data-package-label="Paket Best Seller"
               data-product-name="Parama 3 Pieces"
               data-product-price="675000"
               data-product-type="Paket hemat"
@@ -538,6 +540,7 @@
               class="shop-card reveal"
               data-product-card
               data-product-id="priority"
+              data-package-label="Paket Priority"
               data-product-name="Parama 5 Pieces"
               data-product-price="1095000"
               data-product-type="Paket prioritas"
@@ -559,17 +562,17 @@
 
           <aside class="checkout-card reveal" aria-labelledby="checkout-title">
             <div class="checkout-heading">
-              <p class="eyebrow">Direct Checkout</p>
-              <h3 id="checkout-title">Pembayaran langsung dari landing page</h3>
+              <p class="eyebrow">WhatsApp Order</p>
+              <h3 id="checkout-title">Pemesanan langsung melalui WhatsApp admin</h3>
             </div>
 
             <div class="checkout-summary">
               <div>
-                <span>Produk dipilih</span>
-                <strong id="selected-product-name">Parama 1 Pieces</strong>
+                <span>Paket dipilih</span>
+                <strong id="selected-product-name">Paket Satuan (1 Pieces)</strong>
               </div>
               <div>
-                <span>Jenis pembelian</span>
+                <span>Kategori paket</span>
                 <strong id="selected-product-type">Pembelian satuan</strong>
               </div>
               <div>
@@ -578,58 +581,42 @@
               </div>
             </div>
 
-            <div class="payment-methods" aria-label="Pilihan metode pembayaran">
-              <p class="payment-label">Pilih metode pembayaran</p>
-              <div class="payment-grid">
+            <div class="buyer-type" aria-label="Jenis pembeli">
+              <p class="payment-label">Pilih jenis pembeli</p>
+              <div class="buyer-type-grid">
                 <button
-                  class="payment-option is-active"
+                  class="buyer-type-option is-active"
                   type="button"
-                  data-payment-option
-                  data-payment-name="Transfer Bank"
+                  data-buyer-type-option
+                  data-buyer-type="direct"
+                  data-buyer-label="Pembeli Langsung"
                 >
-                  Transfer Bank
+                  Pembeli Langsung
                 </button>
                 <button
-                  class="payment-option"
+                  class="buyer-type-option"
                   type="button"
-                  data-payment-option
-                  data-payment-name="QRIS"
+                  data-buyer-type-option
+                  data-buyer-type="reseller"
+                  data-buyer-label="Reseller"
                 >
-                  QRIS
-                </button>
-                <button
-                  class="payment-option"
-                  type="button"
-                  data-payment-option
-                  data-payment-name="E-Wallet"
-                >
-                  E-Wallet
-                </button>
-                <button
-                  class="payment-option"
-                  type="button"
-                  data-payment-option
-                  data-payment-name="COD"
-                >
-                  COD
+                  Reseller
                 </button>
               </div>
-              <p class="payment-note" id="selected-payment-note">
-                Metode aktif: Transfer Bank. Admin akan mengirim instruksi pembayaran sesuai pilihan Anda.
-              </p>
             </div>
+
+            <p class="payment-note" id="selected-payment-note">
+              Setelah klik tombol pesan, Anda akan langsung masuk ke WhatsApp admin dengan format order otomatis.
+            </p>
 
             <div class="checkout-actions">
               <a class="button button-primary button-wide" href="#" id="checkout-link" data-checkout-link>
-                Bayar dan Konfirmasi
+                Pesan via WhatsApp
               </a>
-              <button class="button button-secondary button-wide" type="button" id="copy-checkout">
-                Salin Ringkasan Pesanan
-              </button>
             </div>
 
             <p class="micro-copy" id="checkout-note">
-              Ringkasan checkout akan menyesuaikan otomatis saat Anda memilih produk atau metode bayar.
+              Format pesan otomatis akan menyesuaikan paket yang Anda pilih.
             </p>
           </aside>
         </div>

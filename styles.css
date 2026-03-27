@@ -576,16 +576,16 @@ h2 {
 
 .shop-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.95fr);
-  gap: 20px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(340px, 0.92fr);
+  gap: 28px;
   align-items: start;
-  margin-top: 24px;
+  margin-top: 28px;
 }
 
 .shop-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: 1fr;
+  gap: 18px;
 }
 
 .shop-card,
@@ -603,23 +603,49 @@ h2 {
 }
 
 .shop-card {
-  padding: 24px;
-  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 28px;
+  overflow: hidden;
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
+}
+
+.shop-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(244, 212, 161, 0.9), rgba(244, 212, 161, 0));
+  opacity: 0;
+  transition: opacity 220ms ease;
 }
 
 .shop-card.is-selected {
-  border-color: rgba(244, 212, 161, 0.58);
-  background: linear-gradient(180deg, rgba(244, 212, 161, 0.14), rgba(255, 255, 255, 0.05));
-  transform: translateY(-4px);
+  border-color: rgba(244, 212, 161, 0.72);
+  background: linear-gradient(180deg, rgba(244, 212, 161, 0.16), rgba(255, 255, 255, 0.05));
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.32);
+  transform: translateY(-6px);
+}
+
+.shop-card.is-selected::before {
+  opacity: 1;
 }
 
 .shop-badge,
 .payment-label {
-  margin: 0 0 12px;
+  display: inline-flex;
+  align-self: flex-start;
+  margin: 0 0 14px;
+  padding: 8px 12px;
+  border-radius: 999px;
   color: var(--gold);
   letter-spacing: 0.18rem;
   text-transform: uppercase;
   font-size: 0.8rem;
+  background: rgba(244, 212, 161, 0.08);
+  border: 1px solid rgba(244, 212, 161, 0.16);
 }
 
 .shop-copy,
@@ -636,14 +662,22 @@ h2 {
   color: var(--gold-strong);
 }
 
+.shop-card h3 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  line-height: 1;
+}
+
 .shop-card strong {
   font-size: 2rem;
-  margin-bottom: 18px;
+  margin: 8px 0 16px;
 }
 
 .shop-list {
   margin: 0 0 24px;
-  padding-left: 18px;
+  padding: 18px 18px 18px 36px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   color: var(--muted);
   line-height: 1.7;
 }
@@ -651,7 +685,11 @@ h2 {
 .checkout-card {
   position: sticky;
   top: 24px;
-  padding: 26px;
+  padding: 30px;
+  background:
+    radial-gradient(circle at top right, rgba(244, 212, 161, 0.14), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border-color: rgba(244, 212, 161, 0.22);
 }
 
 .checkout-heading h3 {
@@ -668,10 +706,15 @@ h2 {
 }
 
 .checkout-summary div {
-  padding: 16px 18px;
+  padding: 18px 20px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.checkout-summary div:first-child {
+  background: linear-gradient(180deg, rgba(244, 212, 161, 0.14), rgba(255, 255, 255, 0.04));
+  border-color: rgba(244, 212, 161, 0.22);
 }
 
 .checkout-summary span {
@@ -717,11 +760,53 @@ h2 {
 }
 
 .payment-note {
-  margin: 14px 0 0;
+  margin: 18px 0 0;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.buyer-type {
+  margin-top: 24px;
+}
+
+.buyer-type-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.buyer-type-option {
+  min-height: 54px;
+  padding: 0 16px;
+  border-radius: 18px;
+  color: var(--text);
+  cursor: pointer;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(20px);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.buyer-type-option:hover,
+.buyer-type-option.is-active {
+  transform: translateY(-2px);
+  border-color: rgba(244, 212, 161, 0.5);
+}
+
+.buyer-type-option.is-active {
+  background: linear-gradient(135deg, rgba(244, 212, 161, 0.18), rgba(255, 255, 255, 0.06));
 }
 
 .checkout-actions {
   margin-top: 24px;
+}
+
+.checkout-actions .button {
+  min-height: 58px;
+  font-size: 1rem;
 }
 
 .routine-grid {
@@ -1047,10 +1132,14 @@ h2 {
   }
 
   .shop-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .buyer-type-grid {
     grid-template-columns: 1fr;
   }
 }

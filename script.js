@@ -77,26 +77,27 @@ document.getElementById("copy-order")?.addEventListener("click", async () => {
 });
 
 const productCards = Array.from(document.querySelectorAll("[data-product-card]"));
-const paymentOptions = Array.from(document.querySelectorAll("[data-payment-option]"));
+const buyerTypeOptions = Array.from(document.querySelectorAll("[data-buyer-type-option]"));
 const selectedProductName = document.getElementById("selected-product-name");
 const selectedProductType = document.getElementById("selected-product-type");
 const selectedProductPrice = document.getElementById("selected-product-price");
 const selectedPaymentNote = document.getElementById("selected-payment-note");
 const checkoutLink = document.getElementById("checkout-link");
 const checkoutNote = document.getElementById("checkout-note");
-const copyCheckoutButton = document.getElementById("copy-checkout");
 
 const checkoutState = {
   product:
     productCards[0]
       ? {
           id: productCards[0].dataset.productId || "",
+          packageLabel: productCards[0].dataset.packageLabel || "Paket Satuan",
           name: productCards[0].dataset.productName || "Parama 1 Pieces",
           type: productCards[0].dataset.productType || "Pembelian satuan",
           price: Number(productCards[0].dataset.productPrice || 0),
         }
       : null,
-  paymentName: paymentOptions[0]?.dataset.paymentName || "Transfer Bank",
+  buyerType: buyerTypeOptions[0]?.dataset.buyerType || "direct",
+  buyerLabel: buyerTypeOptions[0]?.dataset.buyerLabel || "Pembeli Langsung",
 };
 
 function formatCurrency(amount) {
@@ -108,16 +109,13 @@ function getCheckoutMessage() {
     return pageOrderMessage;
   }
 
-  return [
-    "Halo admin Parama, saya ingin checkout sekarang.",
-    "",
-    `Produk: ${checkoutState.product.name}`,
-    `Kategori: ${checkoutState.product.type}`,
-    `Total: ${formatCurrency(checkoutState.product.price)}`,
-    `Metode pembayaran: ${checkoutState.paymentName}`,
-    "",
-    "Mohon kirim instruksi pembayaran dan konfirmasi pesanan saya.",
-  ].join("\n");
+  const packageName = checkoutState.product.name.replace("Parama ", "");
+
+  if (checkoutState.buyerType === "reseller") {
+    return `Halo Admin Parama, saya ingin memesan ${checkoutState.product.packageLabel} (${packageName}) sebagai reseller. Mohon info harga reseller, minimal order, total biaya, dan nomor rekeningnya.`;
+  }
+
+  return `Halo Admin Parama, saya ingin memesan ${checkoutState.product.packageLabel} (${packageName}) sebagai pembeli langsung. Mohon info total biaya dan nomor rekeningnya.`;
 }
 
 function updateCheckoutUI() {
@@ -125,12 +123,13 @@ function updateCheckoutUI() {
     return;
   }
 
-  selectedProductName.textContent = checkoutState.product.name;
+  selectedProductName.textContent = `${checkoutState.product.packageLabel} (${checkoutState.product.name.replace("Parama ", "")})`;
   selectedProductType.textContent = checkoutState.product.type;
   selectedProductPrice.textContent = formatCurrency(checkoutState.product.price);
-  selectedPaymentNote.textContent = `Metode aktif: ${checkoutState.paymentName}. Admin akan mengirim instruksi pembayaran sesuai pilihan Anda.`;
+  selectedPaymentNote.textContent =
+    `Setelah klik tombol pesan, Anda akan langsung masuk ke WhatsApp admin sebagai ${checkoutState.buyerLabel.toLowerCase()} dengan format order otomatis.`;
   checkoutNote.textContent =
-    `Checkout siap untuk ${checkoutState.product.name} dengan metode ${checkoutState.paymentName}.`;
+    `Pesan WhatsApp siap dikirim untuk ${checkoutState.product.packageLabel} (${checkoutState.product.name.replace("Parama ", "")}) sebagai ${checkoutState.buyerLabel.toLowerCase()}.`;
 
   const checkoutMessage = getCheckoutMessage();
   const orderLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(checkoutMessage)}`;
@@ -146,6 +145,7 @@ productCards.forEach((card) => {
 
     checkoutState.product = {
       id: card.dataset.productId || "",
+      packageLabel: card.dataset.packageLabel || "Paket",
       name: card.dataset.productName || "Parama Special Cream For Man",
       type: card.dataset.productType || "Paket",
       price: Number(card.dataset.productPrice || 0),
@@ -173,11 +173,12 @@ productCards.forEach((card) => {
   });
 });
 
-paymentOptions.forEach((option) => {
+buyerTypeOptions.forEach((option) => {
   option.addEventListener("click", () => {
-    paymentOptions.forEach((item) => item.classList.remove("is-active"));
+    buyerTypeOptions.forEach((item) => item.classList.remove("is-active"));
     option.classList.add("is-active");
-    checkoutState.paymentName = option.dataset.paymentName || "Transfer Bank";
+    checkoutState.buyerType = option.dataset.buyerType || "direct";
+    checkoutState.buyerLabel = option.dataset.buyerLabel || "Pembeli Langsung";
     updateCheckoutUI();
   });
 });
@@ -201,19 +202,6 @@ checkoutLink?.addEventListener("click", () => {
       value: checkoutState.product.price,
       currency: "IDR",
     });
-  }
-});
-
-copyCheckoutButton?.addEventListener("click", async () => {
-  try {
-    await navigator.clipboard.writeText(getCheckoutMessage());
-    if (checkoutNote) {
-      checkoutNote.textContent = "Ringkasan checkout berhasil disalin. Tinggal kirim atau teruskan ke admin.";
-    }
-  } catch (error) {
-    if (checkoutNote) {
-      checkoutNote.textContent = `Clipboard tidak tersedia. Ringkasan checkout: ${getCheckoutMessage()}`;
-    }
   }
 });
 
