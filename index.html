@@ -83,7 +83,7 @@
         "logo": "https://parama-official.com/assets/parama-packshot.png",
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "+62-811-2424-010",
+          "telephone": "+62-821-1240-029",
           "contactType": "sales",
           "areaServed": "ID",
           "availableLanguage": ["id", "en"]
@@ -491,7 +491,7 @@
         <div class="shop-layout">
           <div class="shop-grid">
             <article
-              class="shop-card reveal is-selected"
+              class="shop-card reveal"
               data-product-card
               data-product-id="starter"
               data-package-label="Paket Satuan"
@@ -516,20 +516,44 @@
             <article
               class="shop-card reveal"
               data-product-card
+              data-product-id="best-choice"
+              data-package-label="Paket Best Choice"
+              data-product-name="Parama 2 Pieces"
+              data-product-price="450000"
+              data-product-type="Paket hemat"
+            >
+              <p class="shop-badge">Best Choice</p>
+              <h3>2 Pieces</h3>
+              <p class="shop-copy">Pilihan hemat untuk Anda yang ingin mulai rutin dengan nilai lebih baik.</p>
+              <strong>Rp450.000</strong>
+              <ul class="shop-list">
+                <li>2 pieces Parama 20 gram</li>
+                <li>Hemat Rp20.000 dari pembelian satuan</li>
+                <li>Cocok untuk penggunaan lebih konsisten</li>
+              </ul>
+              <button class="button button-secondary button-wide" type="button" data-select-product>
+                Pilih Paket Best Choice
+              </button>
+            </article>
+
+            <article
+              class="shop-card reveal is-selected"
+              data-product-card
               data-product-id="best-seller"
               data-package-label="Paket Best Seller"
               data-product-name="Parama 3 Pieces"
-              data-product-price="675000"
+              data-product-price="655000"
               data-product-type="Paket hemat"
             >
-              <p class="shop-badge">Best Seller</p>
+              <p class="shop-badge">Best Seller - Rekomendasi Utama</p>
               <h3>3 Pieces</h3>
               <p class="shop-copy">Paket favorit untuk Anda yang ingin lebih hemat dan siap pakai rutin.</p>
-              <strong>Rp675.000</strong>
+              <strong>Rp655.000</strong>
               <ul class="shop-list">
-                <li>Lebih hemat dari pembelian satuan</li>
+                <li>3 pieces Parama 20 gram</li>
+                <li>Hemat Rp50.000 dari pembelian satuan</li>
                 <li>Ideal untuk pemakaian lebih konsisten</li>
-                <li>Favorit pembeli yang ingin stok aman</li>
+                <li>Rekomendasi utama untuk stok aman</li>
               </ul>
               <button class="button button-primary button-wide" type="button" data-select-product>
                 Pilih Paket Best Seller
@@ -550,7 +574,8 @@
               <p class="shop-copy">Untuk Anda yang ingin stok lebih panjang dan ritme perawatan lebih tenang.</p>
               <strong>Rp1.095.000</strong>
               <ul class="shop-list">
-                <li>Persediaan lebih lama</li>
+                <li>5 pieces Parama 20 gram</li>
+                <li>Hemat Rp80.000 dari pembelian satuan</li>
                 <li>Cocok untuk pembelian paket</li>
                 <li>Nyaman untuk repeat order yang lebih jarang</li>
               </ul>
@@ -569,15 +594,15 @@
             <div class="checkout-summary">
               <div>
                 <span>Paket dipilih</span>
-                <strong id="selected-product-name">Paket Satuan (1 Pieces)</strong>
+                <strong id="selected-product-name">Paket Best Seller (3 Pieces)</strong>
               </div>
               <div>
                 <span>Kategori paket</span>
-                <strong id="selected-product-type">Pembelian satuan</strong>
+                <strong id="selected-product-type">Paket hemat</strong>
               </div>
               <div>
                 <span>Total pembayaran</span>
-                <strong id="selected-product-price">Rp235.000</strong>
+                <strong id="selected-product-price">Rp655.000</strong>
               </div>
             </div>
 
@@ -803,10 +828,13 @@
     </div>
 
     <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Parama. Perawatan premium untuk pria dewasa yang menghargai kualitas.</p>
-      <p class="footer-note">
-        Catatan: hasil penggunaan dapat berbeda pada tiap orang. Gunakan sesuai arahan produk.
-      </p>
+      <div class="footer-card">
+        <p>
+          <a class="footer-link" href="https://kanjoe.my.id" target="_blank" rel="noreferrer">
+            @<span id="year"></span> Kangjoe Parama.
+          </a>
+        </p>
+      </div>
     </footer>
 
     <script src="script.js"></script>

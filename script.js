@@ -1,4 +1,4 @@
-const whatsappNumber = "628112424010";
+const whatsappNumber = "628211240029";
 const defaultOrderMessage =
   "Halo admin Parama, saya tertarik dengan Parama Special Cream For Man. Mohon info paket terbaik, stok terbaru, dan cara pemesanannya.";
 const pageOrderMessage = document.body.dataset.orderMessage?.trim() || defaultOrderMessage;
@@ -84,16 +84,18 @@ const selectedProductPrice = document.getElementById("selected-product-price");
 const selectedPaymentNote = document.getElementById("selected-payment-note");
 const checkoutLink = document.getElementById("checkout-link");
 const checkoutNote = document.getElementById("checkout-note");
+const initialSelectedCard =
+  productCards.find((card) => card.classList.contains("is-selected")) || productCards[0];
 
 const checkoutState = {
   product:
-    productCards[0]
+    initialSelectedCard
       ? {
-          id: productCards[0].dataset.productId || "",
-          packageLabel: productCards[0].dataset.packageLabel || "Paket Satuan",
-          name: productCards[0].dataset.productName || "Parama 1 Pieces",
-          type: productCards[0].dataset.productType || "Pembelian satuan",
-          price: Number(productCards[0].dataset.productPrice || 0),
+          id: initialSelectedCard.dataset.productId || "",
+          packageLabel: initialSelectedCard.dataset.packageLabel || "Paket Satuan",
+          name: initialSelectedCard.dataset.productName || "Parama 1 Pieces",
+          type: initialSelectedCard.dataset.productType || "Pembelian satuan",
+          price: Number(initialSelectedCard.dataset.productPrice || 0),
         }
       : null,
   buyerType: buyerTypeOptions[0]?.dataset.buyerType || "direct",
